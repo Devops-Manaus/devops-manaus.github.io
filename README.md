@@ -1,2 +1,2 @@
-# devops-manaus
-Repositorio da nossa pagina da comunidade devops
+# devopsmanaus.github.io
+Landing page da comunidade Devops manaus
