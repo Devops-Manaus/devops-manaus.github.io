@@ -20,9 +20,11 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+      - run: touch dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
