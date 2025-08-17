@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as v;
+
+section {
+  /* padding e largura máximas já estavam, mas reforçando: */
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* fundo alternado */
+  &:nth-of-type(even) {
+    background: rgba(v.$bg-stop-2, 0.2);
+  }
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, v.$color-primary, v.$color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}

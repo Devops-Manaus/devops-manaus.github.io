@@ -1,13 +1,13 @@
 ---
 import Base from "../layouts/Base.astro";
 
-import navlinks  from "../data/navlinks.json";
-import hero      from "../data/hero.json";
-import about     from "../data/about.json";
-import partners  from "../data/partners.json";
-import services  from "../data/services.json";
+import navlinks from "../data/navlinks.json";
+import hero from "../data/hero.json";
+import about from "../data/about.json";
+import partners from "../data/partners.json";
+import services from "../data/services.json";
 import community from "../data/community.json";
-import footer    from "../data/footer.json";
+import footer from "../data/footer.json";
 ---
 
 <Base title="DevOps Manaus – Transformando o Futuro Tech da Amazônia">
@@ -57,7 +57,7 @@ import footer    from "../data/footer.json";
         <div class="grid">
             {partners.map(p => (
                     <div class="card text-center">
-                        <img src={p.img} alt={p.name} class="w-32 h-32 rounded-full mb-4 mx-auto" />
+                        <img src={p.img} alt={p.name} class="w-32 h-32 rounded-full mb-4 mx-auto"/>
                         <h3>{p.name}</h3>
                         <p>
                             {p.links.map((link, i) => (
@@ -87,9 +87,14 @@ import footer    from "../data/footer.json";
     <section id="community">
         <h2 class="section-title">Nossa Comunidade</h2>
         <div class="stats">
-            {community.stats.map(stat => (
+            {community.stats.map((stat, index, arr) => (
                     <div class="stat">
-                        <span class="stat-number">{stat.value}</span>
+                          <span class="stat-number">
+                            <span class="value">{stat.value}</span>
+                              {index < arr.length - 1 && (
+                                      <span class="symbol">+</span>
+                              )}
+                          </span>
                         <span class="stat-label">{stat.label}</span>
                     </div>
             ))}

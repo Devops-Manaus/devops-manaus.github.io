@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+.hero {
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: v.$color-primary;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.hero-content {
+  max-width: 900px;
+  z-index: 2;
+  @include m.fade-in-up(1s);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+                  135deg,
+                  v.$color-primary 0%,
+                  v.$color-secondary 50%,
+                  v.$color-accent 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.lema {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: v.$color-secondary;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  border: 2px solid rgba(v.$color-secondary, 0.3);
+  border-radius: 50px;
+  background: rgba(v.$color-accent, 0.1);
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}

@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as v;
+
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(v.$bg-stop-1, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(v.$bg-stop-6, 0.3);
+  z-index: 1000; padding: 1rem 0; transition: all 0.3s ease;
+
+  nav {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+}
+
+.logo {
+  font-size: 1.8rem; font-weight: 800;
+  background: linear-gradient(45deg, v.$color-secondary, v.$color-accent);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex; list-style: none; gap: 2rem;
+
+  a {
+    position: relative;
+    color: #2d3748; text-decoration: none; font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: v.$color-secondary;
+      transform: translateY(-2px);
+    }
+
+    &::after {
+      content: ""; position: absolute; bottom: -5px; left: 0;
+      width: 0; height: 2px; background: v.$color-secondary;
+      transition: width 0.3s ease;
+    }
+    &:hover::after { width: 100%; }
+  }
+}

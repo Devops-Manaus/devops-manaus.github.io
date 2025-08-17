@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as v;
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(v.$color-secondary, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+                    90deg,
+                    #{v.$color-secondary} 0%,
+                    #{v.$color-accent}    100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: rgba(v.$color-secondary, 0.4);
+    box-shadow: 0 20px 40px rgba(v.$color-secondary, 0.2);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: v.$color-secondary;
+  }
+
+  p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+}

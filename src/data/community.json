@@ -1,8 +1,8 @@
 {
   "stats": [
-    { "label": "Membros Ativos",         "value": "500+" },
-    { "label": "Eventos Realizados",      "value": "50+" },
-    { "label": "Projetos Implementados",  "value": "100+" },
+    { "label": "Membros Ativos",         "value": "500" },
+    { "label": "Eventos Realizados",      "value": "50" },
+    { "label": "Projetos Implementados",  "value": "100" },
     { "label": "Suporte da Comunidade",   "value": "24/7" }
   ],
   "card": {

@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as v;
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: v.$color-primary;
+  overflow-x: hidden;
+  background: linear-gradient(
+                  135deg,
+                  v.$bg-stop-1 0%,
+                  v.$bg-stop-2 20%,
+                  v.$bg-stop-3 40%,
+                  v.$bg-stop-4 60%,
+                  v.$bg-stop-5 80%,
+                  v.$bg-stop-6 100%
+  );
+}

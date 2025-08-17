@@ -1,0 +1,86 @@
+$color-primary: #1a365d !default;
+$color-secondary: #2b6cb8 !default;
+$color-accent: #ff6b6b !default;
+$color-neutral: #4a5568 !default;
+
+
+$sky-blue: #87CEEB !default;
+$rio-negro-blue: #001F3F !default;
+$jungle-green: #228B22 !default;
+$theater-gold: #FFC700 !default;
+$bridge-red: #D7263D !default;
+
+
+$bg-stop-1: $sky-blue !default;
+$bg-stop-2: #e6f3ff !default;
+$bg-stop-3: #cce7ff !default;
+$bg-stop-4: #b3daff !default;
+$bg-stop-5: $theater-gold !default;
+$bg-stop-6: $bridge-red !default;
+
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-neutral: #{$color-neutral};
+
+  --sky-blue: #{$sky-blue};
+  --rio-negro-blue: #{$rio-negro-blue};
+  --jungle-green: #{$jungle-green};
+  --theater-gold: #{$theater-gold};
+  --bridge-red: #{$bridge-red};
+
+  --bg-stop-1: #{$bg-stop-1};
+  --bg-stop-2: #{$bg-stop-2};
+  --bg-stop-3: #{$bg-stop-3};
+  --bg-stop-4: #{$bg-stop-4};
+  --bg-stop-5: #{$bg-stop-5};
+  --bg-stop-6: #{$bg-stop-6};
+}
+
+
+$themes: (
+        light: (
+                color-primary: $color-primary,
+                color-secondary: $color-secondary,
+                color-accent: $color-accent,
+                bg-stop-1: $bg-stop-1,
+                bg-stop-2: $bg-stop-2,
+                bg-stop-3: $bg-stop-3,
+                bg-stop-4: $bg-stop-4,
+                bg-stop-5: $bg-stop-5,
+                bg-stop-6: $bg-stop-6
+        ),
+        dark: (
+                color-primary: #e2e8f0,
+                color-secondary: #a0aec0,
+                color-accent: #f56565,
+                bg-stop-1: #1a202c,
+                bg-stop-2: #2d3748,
+                bg-stop-3: #4a5568,
+                bg-stop-4: #2d3748,
+                bg-stop-5: #1a202c,
+                bg-stop-6: #171923
+        ),
+        regional: (
+                color-primary: $rio-negro-blue,
+                color-secondary: $jungle-green,
+                color-accent: $theater-gold,
+                bg-stop-1: $sky-blue,
+                bg-stop-2: mix($sky-blue, $theater-gold, 20%),
+                bg-stop-3: mix($sky-blue, $jungle-green, 20%),
+                bg-stop-4: $jungle-green,
+                bg-stop-5: $theater-gold,
+                bg-stop-6: $bridge-red
+        )
+) !default;
+
+
+@each $theme-name, $palette in $themes {
+  .theme-#{$theme-name} {
+    @each $key, $val in $palette {
+      --#{$key}: #{$val};
+    }
+  }
+}

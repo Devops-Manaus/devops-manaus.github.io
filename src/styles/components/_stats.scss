@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as v;
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.stat {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255,255,255,0.6);
+  border-radius: 15px;
+  border: 1px solid rgba(v.$color-primary,0.3);
+
+  .stat-number {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    font-size: 3rem;
+    font-weight: 900;
+
+    .value {
+    }
+
+    .symbol {
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+
+  .stat-label {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #4a5568;
+  }
+}

@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as v;
+
+.cta-button {
+  background: linear-gradient(135deg, v.$color-secondary, v.$color-accent);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(v.$color-secondary, 0.3);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: v.$color-secondary;
+  border: 2px solid v.$color-secondary;
+}
+
+.cta-secondary:hover {
+  background: v.$color-secondary;
+  color: #fff;
+}

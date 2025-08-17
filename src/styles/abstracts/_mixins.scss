@@ -1,0 +1,20 @@
+@use 'sass:meta';
+
+@mixin gradient-bg($angle, $from, $to) {
+  background: linear-gradient($angle, $from 0%, $to 100%);
+}
+
+@mixin fade-in-up($duration) {
+  animation: fadeInUp $duration ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
