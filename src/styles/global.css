@@ -20,7 +20,7 @@ body {
     );
     color: #1a365d;
     overflow-x: hidden;
-    /*background-image: image("media/images/backeground_image.jpg");*/
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 20%, #cce7ff 40%, #b3daff 60%, #99cdff 80%, #ffd700 100%);
 }
 .particles {
     position: fixed;
