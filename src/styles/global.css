@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family:
-            "Inter",
-            -apple-system,
-            BlinkMacSystemFont,
-            sans-serif;
+    font-family: "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
     background: linear-gradient(
             135deg,
             #f0f8ff 0%,
@@ -22,6 +22,7 @@ body {
     overflow-x: hidden;
     background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 20%, #cce7ff 40%, #b3daff 60%, #99cdff 80%, #ffd700 100%);
 }
+
 .particles {
     position: fixed;
     top: 0;
@@ -31,6 +32,7 @@ body {
     z-index: -1;
     opacity: 0.1;
 }
+
 .particle {
     position: absolute;
     width: 4px;
@@ -39,6 +41,7 @@ body {
     border-radius: 50%;
     animation: float 20s infinite linear;
 }
+
 @keyframes float {
     0% {
         transform: translateY(100vh) translateX(0px);
@@ -54,7 +57,9 @@ body {
         transform: translateY(-100vh) translateX(100px);
         opacity: 0;
     }
-} /* Header */
+}
+
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -67,6 +72,7 @@ header {
     padding: 1rem 0;
     transition: all 0.3s ease;
 }
+
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -75,6 +81,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
@@ -83,11 +90,13 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
+
 .nav-links a {
     color: #2d3748;
     text-decoration: none;
@@ -95,10 +104,12 @@ nav {
     transition: all 0.3s ease;
     position: relative;
 }
+
 .nav-links a:hover {
     color: #2b6cb8;
     transform: translateY(-2px);
 }
+
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -109,9 +120,12 @@ nav {
     background: #2b6cb8;
     transition: width 0.3s ease;
 }
+
 .nav-links a:hover::after {
     width: 100%;
-} /* Hero Section */
+}
+
+/* Hero Section */
 .hero {
     padding: 5rem 0;
     display: flex;
@@ -121,11 +135,13 @@ nav {
     position: relative;
     overflow: hidden;
 }
+
 .hero-content {
     max-width: 900px;
     z-index: 2;
     animation: fadeInUp 1s ease-out;
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -136,6 +152,7 @@ nav {
         transform: translateY(0);
     }
 }
+
 .hero h1 {
     font-size: 4rem;
     font-weight: 900;
@@ -151,12 +168,14 @@ nav {
     background-clip: text;
     line-height: 1.2;
 }
+
 .hero .subtitle {
     font-size: 1.5rem;
     color: #4a5568;
     margin-bottom: 2rem;
     font-weight: 300;
 }
+
 .lema {
     font-size: 1.8rem;
     font-weight: 600;
@@ -169,6 +188,7 @@ nav {
     display: inline-block;
     animation: pulse 2s infinite;
 }
+
 @keyframes pulse {
     0%,
     100% {
@@ -178,6 +198,7 @@ nav {
         transform: scale(1.05);
     }
 }
+
 .cta-button {
     background: linear-gradient(135deg, #2b6cb8, #ff6b6b);
     color: #ffffff;
@@ -192,24 +213,30 @@ nav {
     display: inline-block;
     margin: 0 1rem;
 }
+
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 20px 40px rgba(43, 108, 184, 0.3);
 }
+
 .cta-secondary {
     background: transparent;
     color: #2b6cb8;
     border: 2px solid #2b6cb8;
 }
+
 .cta-secondary:hover {
     background: #2b6cb8;
     color: #ffffff;
-} /* Sections */
+}
+
+/* Sections */
 section {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .section-title {
     font-size: 3rem;
     font-weight: 800;
@@ -220,12 +247,14 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
+
 .card {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(43, 108, 184, 0.2);
@@ -236,16 +265,19 @@ section {
     position: relative;
     overflow: hidden;
 }
+
 #partners .card a {
     color: #2b6cb8;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
 }
+
 #partners .card a:hover {
     text-decoration: underline;
     transform: translateY(-2px);
 }
+
 .card::before {
     content: "";
     position: absolute;
@@ -257,31 +289,37 @@ section {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-10px);
     border-color: rgba(43, 108, 184, 0.4);
     box-shadow: 0 20px 40px rgba(43, 108, 184, 0.2);
 }
+
 .card:hover::before {
     opacity: 1;
 }
+
 .card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #2b6cb8;
 }
+
 .card p {
     color: #4a5568;
     line-height: 1.6;
     font-size: 1rem;
 }
+
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin: 4rem 0;
 }
+
 .stat {
     text-align: center;
     padding: 2rem;
@@ -289,33 +327,40 @@ section {
     border-radius: 15px;
     border: 1px solid rgba(43, 108, 184, 0.3);
 }
+
 .stat-number {
     font-size: 3rem;
     font-weight: 900;
     color: #2b6cb8;
     display: block;
 }
+
 .stat-label {
     font-size: 1rem;
     color: #4a5568;
     margin-top: 0.5rem;
-} /* Footer */
+}
+
+/* Footer */
 footer {
     background: rgba(255, 255, 255, 0.8);
     border-top: 1px solid rgba(43, 108, 184, 0.2);
     padding: 3rem 2rem 2rem;
     text-align: center;
 }
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .social-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
 }
+
 .social-links a {
     display: inline-flex;
     align-items: center;
@@ -328,28 +373,36 @@ footer {
     text-decoration: none;
     transition: all 0.3s ease;
 }
+
 .social-links a:hover {
     background: #2b6cb8;
     color: #ffffff;
     transform: translateY(-3px);
-} /* Responsive */
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
     }
+
     .hero .subtitle {
         font-size: 1.2rem;
     }
+
     .lema {
         font-size: 1.2rem;
         padding: 0.5rem 1.2rem;
     }
+
     .nav-links {
         display: none;
     }
+
     section {
         padding: 4rem 1rem;
     }
+
     .hero a.cta-button,
     .hero a.cta-secondary {
         display: block;
