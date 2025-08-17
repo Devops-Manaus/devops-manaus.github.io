@@ -1,0 +1,17 @@
+[
+  {
+    "name": "LinuxTips",
+    "img": "/assets/media/images/linux_tips.jpg",
+    "links": [
+      { "label": "Site oficial", "url": "https://linuxtips.io/" },
+      { "label": "Instagram",    "url": "https://www.instagram.com/linuxtipsbr/" }
+    ]
+  },
+  {
+    "name": "PyLadies Manaus",
+    "img": "/assets/media/images/pyladies.jpg",
+    "links": [
+      { "label": "Instagram", "url": "https://www.instagram.com/pyladiesmanaus/?hl=en" }
+    ]
+  }
+]

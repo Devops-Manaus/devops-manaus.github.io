@@ -1,0 +1,7 @@
+[
+  { "label": "Home",       "href": "#home" },
+  { "label": "Quem Somos", "href": "#about" },
+  { "label": "Serviços",   "href": "#services" },
+  { "label": "Comunidade", "href": "#community" },
+  { "label": "Contato",    "href": "#contact" }
+]

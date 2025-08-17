@@ -1,0 +1,10 @@
+{
+  "social": [
+    { "name": "GitHub",    "url": "https://github.com/devopsmanaus",    "icon": "🐙" },
+    { "name": "Instagram", "url": "https://instagram.com/devopsmanaus", "icon": "📸" },
+    { "name": "Discord",   "url": "#",                                   "icon": "💬" },
+    { "name": "Email",     "url": "#",                                   "icon": "📧" }
+  ],
+  "text": "© 2024 DevOps Manaus. Todos os direitos reservados. Feito com ❤️ no coração da Amazônia.",
+  "location": "📍 Manaus, Amazonas - Onde a tecnologia encontra a natureza"
+}

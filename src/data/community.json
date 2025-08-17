@@ -1,0 +1,12 @@
+{
+  "stats": [
+    { "label": "Membros Ativos",         "value": "500+" },
+    { "label": "Eventos Realizados",      "value": "50+" },
+    { "label": "Projetos Implementados",  "value": "100+" },
+    { "label": "Suporte da Comunidade",   "value": "24/7" }
+  ],
+  "card": {
+    "heading": "🌉 Conectando Talentos como a Ponte Rio Negro",
+    "text": "Nossa comunidade é forte e conectada como a icônica Ponte Jornalista Phelippe Daou, que une as duas margens do Rio Negro. Aqui, desenvolvemos não apenas código, mas carreiras. Conectamos profissionais iniciantes com seniors experientes, startups locais com oportunidades globais, e práticas tradicionais com inovação DevOps de ponta. Juntos, construímos o futuro tech de Manaus."
+  }
+}

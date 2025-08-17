@@ -1,30 +1,41 @@
 ---
 import Base from "../layouts/Base.astro";
+
+import navlinks  from "../data/navlinks.json";
+import hero      from "../data/hero.json";
+import about     from "../data/about.json";
+import partners  from "../data/partners.json";
+import services  from "../data/services.json";
+import community from "../data/community.json";
+import footer    from "../data/footer.json";
 ---
-<Base title="DevOps Manaus - Transformando o Futuro Tech da Amazônia">
+
+<Base title="DevOps Manaus – Transformando o Futuro Tech da Amazônia">
     <div class="particles" id="particles"></div>
 
     <header>
         <nav>
             <div class="logo">DevOps Manaus</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Quem Somos</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#community">Comunidade</a></li>
-                <li><a href="#contact">Contato</a></li>
+                {navlinks.map(link => (
+                        <li><a href={link.href}>{link.label}</a></li>
+                ))}
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>DevOps Manaus</h1>
-            <p class="subtitle">Transformando o Futuro Tech da Amazônia</p>
-            <div class="lema">"Como a Ponte Rio Negro conecta duas margens, conectamos Dev e Ops"</div>
+            <h1>{hero.title}</h1>
+            <p class="subtitle">{hero.subtitle}</p>
+            <div class="lema">{hero.lema}</div>
             <div>
-                <a href="#about" class="cta-button">Conheça Nossa Missão</a>
-                <a href="#community" class="cta-button cta-secondary">Junte-se à Comunidade</a>
+                {hero.ctas.map(cta => (
+                        <a href={cta.href}
+                           class={`cta-button ${cta.variant === 'secondary' ? 'cta-secondary' : ''}`}>
+                            {cta.label}
+                        </a>
+                ))}
             </div>
         </div>
     </section>
@@ -32,96 +43,72 @@ import Base from "../layouts/Base.astro";
     <section id="about">
         <h2 class="section-title">Quem Somos</h2>
         <div class="grid">
-            <div class="card">
-                <h3>Nossa Missão</h3>
-                <p>Assim como o encontro das águas do Rio Negro e Solimões forma o majestoso Rio Amazonas, nossa missão é unir desenvolvimento e operações em uma única força transformadora. Levamos a cultura DevOps para o coração da Amazônia, capacitando profissionais e empresas de Manaus a alcançarem novos patamares de eficiência e inovação tecnológica.</p>
-            </div>
-            <div class="card">
-                <h3>Nossa Visão</h3>
-                <p>Ser a referência em DevOps na região Norte, construindo pontes tecnológicas que conectem Manaus ao mundo. Como a icônica Ponte Rio Negro une duas margens, queremos conectar talentos locais às oportunidades globais, transformando nossa cidade em um hub de inovação DevOps na Amazônia.</p>
-            </div>
-            <div class="card">
-                <h3>Nossos Valores</h3>
-                <p>Colaboração contínua, inovação sustentável e respeito à nossa biodiversidade digital. Acreditamos que a tecnologia deve crescer em harmonia com nossa região, promovendo desenvolvimento econômico sem perder nossa identidade amazônica. Cultivamos uma comunidade forte como a floresta que nos cerca.</p>
-            </div>
+            {about.map(item => (
+                    <div class="card">
+                        <h3>{item.heading}</h3>
+                        <p>{item.text}</p>
+                    </div>
+            ))}
         </div>
     </section>
 
     <section id="partners">
         <h2 class="section-title">Parceiros</h2>
         <div class="grid">
-            <div class="card" style="text-align:center">
-                <img src="/assets/media/images/linux_tips.jpg" alt="LinuxTips" style="width:120px;height:120px;border-radius:50%;margin-bottom:1rem;" />
-                <h3>LinuxTips</h3>
-                <p>
-                    <a href="https://linuxtips.io/" target="_blank">Site oficial</a> —
-                    <a href="https://www.instagram.com/linuxtipsbr/" target="_blank">Instagram</a>
-                </p>
-            </div>
-            <div class="card" style="text-align:center">
-                <img src="/assets/media/images/pyladies.jpg" alt="PyLadies Manaus" style="width:120px;height:120px;border-radius:50%;margin-bottom:1rem;" />
-                <h3>PyLadies Manaus</h3>
-                <p>
-                    <a href="https://www.instagram.com/pyladiesmanaus/?hl=en" target="_blank">Instagram</a>
-                </p>
-            </div>
+            {partners.map(p => (
+                    <div class="card text-center">
+                        <img src={p.img} alt={p.name} class="w-32 h-32 rounded-full mb-4 mx-auto" />
+                        <h3>{p.name}</h3>
+                        <p>
+                            {p.links.map((link, i) => (
+                                    <>
+                                        <a href={link.url} target="_blank">{link.label}</a>
+                                        {i < p.links.length - 1 && " — "}
+                                    </>
+                            ))}
+                        </p>
+                    </div>
+            ))}
         </div>
     </section>
 
     <section id="services">
         <h2 class="section-title">O Que Fazemos</h2>
         <div class="grid">
-            <div class="card">
-                <h3>🚀 Transformação DevOps</h3>
-                <p>Implementamos pipelines CI/CD robustos, automação de infraestrutura com Infrastructure as Code (IaC), monitoramento 24/7 e cultura de colaboração. Levamos práticas DevOps de ponta para empresas de todos os portes em Manaus, conectando desenvolvimento ágil com operações eficientes.</p>
-            </div>
-            <div class="card">
-                <h3>📚 Capacitação Técnica</h3>
-                <p>Workshops presenciais no coração de Manaus, bootcamps intensivos de ferramentas como Docker, Kubernetes, Jenkins, Git, AWS e Azure. Treinamentos práticos em metodologias ágeis, containerização, orquestração e automação de deploys para formar os DevOps Engineers do futuro.</p>
-            </div>
-            <div class="card">
-                <h3>🤝 Comunidade Amazônica</h3>
-                <p>Meetups mensais na Ponte Rio Negro, networking tech nos principais pontos de Manaus, mentorias gratuitas para iniciantes e conexão com oportunidades remotas globais. Construímos uma rede forte de profissionais DevOps que se apoia mutuamente na região Norte.</p>
-            </div>
+            {services.map(s => (
+                    <div class="card">
+                        <h3>{s.icon} {s.title}</h3>
+                        <p>{s.text}</p>
+                    </div>
+            ))}
         </div>
     </section>
 
     <section id="community">
         <h2 class="section-title">Nossa Comunidade</h2>
         <div class="stats">
-            <div class="stat">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Membros Ativos</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Eventos Realizados</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">100+</span>
-                <span class="stat-label">Projetos Implementados</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Suporte da Comunidade</span>
-            </div>
+            {community.stats.map(stat => (
+                    <div class="stat">
+                        <span class="stat-number">{stat.value}</span>
+                        <span class="stat-label">{stat.label}</span>
+                    </div>
+            ))}
         </div>
         <div class="card">
-            <h3>🌉 Conectando Talentos como a Ponte Rio Negro</h3>
-            <p>Nossa comunidade é forte e conectada como a icônica Ponte Jornalista Phelippe Daou, que une as duas margens do Rio Negro. Aqui, desenvolvemos não apenas código, mas carreiras. Conectamos profissionais iniciantes com seniors experientes, startups locais com oportunidades globais, e práticas tradicionais com inovação DevOps de ponta. Juntos, construímos o futuro tech de Manaus.</p>
+            <h3>{community.card.heading}</h3>
+            <p>{community.card.text}</p>
         </div>
     </section>
 
     <footer id="contact">
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://github.com/devopsmanaus" title="GitHub">🐙</a>
-                <a href="https://instagram.com/devopsmanaus" title="Instagram">📸</a>
-                <a href="#" title="Discord">💬</a>
-                <a href="#" title="Email">📧</a>
+                {footer.social.map(s => (
+                        <a href={s.url} title={s.name}>{s.icon}</a>
+                ))}
             </div>
-            <p>© 2024 DevOps Manaus. Todos os direitos reservados. Feito com ❤️ no coração da Amazônia.</p>
-            <p style="margin-top: 1rem; color: #666;">📍 Manaus, Amazonas - Onde a tecnologia encontra a natureza</p>
+            <p>{footer.text}</p>
+            <p class="text-gray-500 mt-2">{footer.location}</p>
         </div>
     </footer>
 </Base>
