@@ -1,52 +1,62 @@
+// brand.core.scss
 @use 'sass:color';
 
-$color-primary: #1a365d !default;
-$color-secondary: #2b6cb8 !default;
-$color-accent: #ff6b6b !default;
-$color-neutral: #4a5568 !default;
+// Cores base inspiradas em Manaus + DevOps
+$rio-negro-blue: #0E2239 !default;   // Rio Negro profundo
+$theater-gold:  #FFC300 !default;    // Cúpula do Teatro Amazonas
+$jungle-green:  #1E8E3E !default;    // Floresta
+$onca-amber:    #FF9E1B !default;    // Pelagem da onça
+$onca-spot:     #2B2B2B !default;    // Rosetas
+$devops-cyan:   #06B6D4 !default;    // Pipelines
+$pipeline-purple:#7C3AED !default;   // CI/CD
+$bridge-red:    #D7263D !default;    // Iluminação da ponte
+$sky-blue:      #87CEEB !default;
 
+// Tokens principais
+$color-primary:   $rio-negro-blue !default;
+$color-secondary: $theater-gold !default;
+$color-accent:    $devops-cyan !default;
+$color-neutral:   #475569 !default; // slate
 
-$sky-blue: #87CEEB !default;
-$rio-negro-blue: #001F3F !default;
-$jungle-green: #228B22 !default;
-$theater-gold: #FFC700 !default;
-$bridge-red: #D7263D !default;
+// Estados
+$success: $jungle-green !default;
+$warning: $onca-amber !default;
+$danger:  #EF4444 !default;
+$info:    $sky-blue !default;
 
-
-$bg-stop-1: $sky-blue !default;
-$bg-stop-2: #e6f3ff !default;
-$bg-stop-3: #cce7ff !default;
-$bg-stop-4: #b3daff !default;
+// Gradiente de fundo
+$bg-stop-1: color.scale($rio-negro-blue, $lightness: -20%) !default;
+$bg-stop-2: $rio-negro-blue !default;
+$bg-stop-3: color.mix($rio-negro-blue, $devops-cyan, 40%) !default;
+$bg-stop-4: $devops-cyan !default;
 $bg-stop-5: $theater-gold !default;
 $bg-stop-6: $bridge-red !default;
 
-
+// CSS Vars
 :root {
-  --color-primary: #{$color-primary};
-  --color-secondary: #{$color-secondary};
-  --color-accent: #{$color-accent};
-  --color-neutral: #{$color-neutral};
-
-  --sky-blue: #{$sky-blue};
-  --rio-negro-blue: #{$rio-negro-blue};
-  --jungle-green: #{$jungle-green};
-  --theater-gold: #{$theater-gold};
-  --bridge-red: #{$bridge-red};
-
-  --bg-stop-1: #{$bg-stop-1};
-  --bg-stop-2: #{$bg-stop-2};
-  --bg-stop-3: #{$bg-stop-3};
-  --bg-stop-4: #{$bg-stop-4};
-  --bg-stop-5: #{$bg-stop-5};
-  --bg-stop-6: #{$bg-stop-6};
+  --color-primary:#{$color-primary};
+  --color-secondary:#{$color-secondary};
+  --color-accent:#{$color-accent};
+  --color-neutral:#{$color-neutral};
+  --success:#{$success};
+  --warning:#{$warning};
+  --danger:#{$danger};
+  --info:#{$info};
+  --bg-stop-1:#{$bg-stop-1};
+  --bg-stop-2:#{$bg-stop-2};
+  --bg-stop-3:#{$bg-stop-3};
+  --bg-stop-4:#{$bg-stop-4};
+  --bg-stop-5:#{$bg-stop-5};
+  --bg-stop-6:#{$bg-stop-6};
 }
 
-
+// Temas
 $themes: (
         light: (
                 color-primary: $color-primary,
                 color-secondary: $color-secondary,
                 color-accent: $color-accent,
+                color-neutral: $color-neutral,
                 bg-stop-1: $bg-stop-1,
                 bg-stop-2: $bg-stop-2,
                 bg-stop-3: $bg-stop-3,
@@ -55,34 +65,44 @@ $themes: (
                 bg-stop-6: $bg-stop-6
         ),
         dark: (
-                color-primary: #e2e8f0,
-                color-secondary: #a0aec0,
-                color-accent: #f56565,
-                bg-stop-1: #1a202c,
-                bg-stop-2: #2d3748,
-                bg-stop-3: #4a5568,
-                bg-stop-4: #2d3748,
-                bg-stop-5: #1a202c,
-                bg-stop-6: #171923
+                color-primary: #E2E8F0,
+                color-secondary: color.scale($theater-gold, $lightness: 10%),
+                color-accent: color.scale($devops-cyan, $lightness: 10%),
+                color-neutral: #94A3B8,
+                bg-stop-1: #0B1220,
+                bg-stop-2: #0E1D33,
+                bg-stop-3: color.mix(#0E1D33, $pipeline-purple, 30%),
+                bg-stop-4: color.mix(#0E1D33, $devops-cyan, 40%),
+                bg-stop-5: color.scale($theater-gold, $lightness: -10%),
+                bg-stop-6: #111827
         ),
         regional: (
                 color-primary: $rio-negro-blue,
-                color-secondary: $jungle-green,
-                color-accent: $theater-gold,
-                bg-stop-1: $sky-blue,
-                bg-stop-2: color.mix($sky-blue, $theater-gold, 20%),
-                bg-stop-3: color.mix($sky-blue, $jungle-green, 20%),
+                color-secondary: $theater-gold,
+                color-accent: $pipeline-purple,
+                color-neutral: $color-neutral,
+                bg-stop-1: $bg-stop-1,
+                bg-stop-2: color.mix($rio-negro-blue, $devops-cyan, 25%),
+                bg-stop-3: color.mix($rio-negro-blue, $jungle-green, 25%),
                 bg-stop-4: $jungle-green,
                 bg-stop-5: $theater-gold,
                 bg-stop-6: $bridge-red
         )
 ) !default;
 
-
 @each $theme-name, $palette in $themes {
-  .theme-#{$theme-name} {
-    @each $key, $val in $palette {
-      --#{$key}: #{$val};
-    }
-  }
+  .theme-#{$theme-name} { @each $key, $val in $palette { --#{$key}: #{$val}; } }
 }
+
+// Utilitários visuais
+@mixin brand-gradient {
+  background: linear-gradient(135deg, var(--bg-stop-1), var(--bg-stop-3) 35%, var(--bg-stop-4) 60%, var(--bg-stop-5));
+}
+@mixin onca-pattern($alpha:.06) {
+  background-image:
+          radial-gradient(circle at 20% 30%, rgba($onca-spot,$alpha) 0 8px, transparent 9px),
+          radial-gradient(circle at 70% 60%, rgba($onca-spot,$alpha) 0 6px, transparent 7px);
+  background-size: 120px 120px;
+}
+.btn--primary { background: linear-gradient(135deg, var(--color-secondary), var(--color-accent)); color:#fff; }
+.badge--devops { background: color.mix($pipeline-purple, $devops-cyan, 50%); color:#fff; }
