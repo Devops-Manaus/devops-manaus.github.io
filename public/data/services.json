@@ -2,16 +2,16 @@
   {
     "icon": "🚀",
     "title": "Transformação DevOps",
-    "text": "Implementamos pipelines CI/CD robustos, automação de infraestrutura com Infrastructure as Code (IaC), monitoramento 24/7 e cultura de colaboração. Levamos práticas DevOps de ponta para empresas de todos os portes em Manaus, conectando desenvolvimento ágil com operações eficientes."
+    "text": "Levamos DevOps para empresas de todos os portes em Manaus: pipelines CI/CD, automação de infraestrutura, monitoramento 24/7, cultura ágil e resultados mensuráveis. Infraestrutura moderna, com a cara da Amazônia."
   },
   {
     "icon": "📚",
     "title": "Capacitação Técnica",
-    "text": "Workshops presenciais no coração de Manaus, bootcamps intensivos de ferramentas como Docker, Kubernetes, Jenkins, Git, AWS e Azure. Treinamentos práticos em metodologias ágeis, containerização, orquestração e automação de deploys para formar os DevOps Engineers do futuro."
+    "text": "Bootcamps, workshops e mentorias hands-on com foco em ferramentas reais: Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, AWS. Da floresta para a nuvem."
   },
   {
     "icon": "🤝",
     "title": "Comunidade Amazônica",
-    "text": "Meetups mensais na Ponte Rio Negro, networking tech nos principais pontos de Manaus, mentorias gratuitas para iniciantes e conexão com oportunidades remotas globais. Construímos uma rede forte de profissionais DevOps que se apoia mutuamente na região Norte."
+    "text": "Meetups, mentorias, apoio mútuo. A DevOps Manaus é feita de pessoas que querem crescer juntas e transformar o cenário tech do Norte."
   }
 ]

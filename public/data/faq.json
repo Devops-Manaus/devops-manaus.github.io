@@ -1,14 +1,14 @@
 [
   {
-    "q": "É realmente gratuito?",
-    "a": "Sim! Todos os nossos eventos, materiais e mentorias são 100% gratuitos para a comunidade — sem pegadinhas."
+    "q": "É gratuito mesmo?",
+    "a": "Sim! Tudo aqui é feito por e para a comunidade. Sem custos, sem pegadinhas. Só colaboração."
   },
   {
-    "q": "Preciso ter experiência em programação?",
-    "a": "De jeito nenhum. Temos trilhas e mentorias estruturadas para quem nunca escreveu uma linha de código até quem já domina DevOps."
+    "q": "Preciso saber programar?",
+    "a": "Não! Temos trilhas desde o zero até DevOps avançado. Se você tem curiosidade, já é bem-vindo."
   },
   {
     "q": "Como faço para participar?",
-    "a": "É muito simples: entre no nosso grupo no WhatsApp que esta no junte-se a nossa comunidade"
+    "a": "É só entrar no grupo da comunidade no WhatsApp ou Slack. Todos os links estão aqui no site."
   }
 ]
