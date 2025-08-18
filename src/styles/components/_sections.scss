@@ -28,3 +28,23 @@ section {
   gap: 2rem;
   margin-top: 3rem;
 }
+.lead-capture {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(v.$theater-gold, .1);
+  border-bottom: 1px solid v.$theater-gold;
+
+  h3 {
+    font-size: 2rem;
+    color: v.$rio-negro-blue;
+    margin-bottom: .5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    color: v.$color-neutral;
+  }
+  .cta-button {
+    //@include gradient-bg(135deg, v.$rio-negro-blue, v.$bridge-red);
+    color: white;
+  }
+}

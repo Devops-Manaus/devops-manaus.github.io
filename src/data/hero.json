@@ -1,9 +1,0 @@
-{
-  "title": "DevOps Manaus",
-  "subtitle": "Transformando o Futuro Tech da Amazônia",
-  "lema": "Como a Ponte Rio Negro conecta duas margens, conectamos Dev e Ops",
-  "ctas": [
-    { "label": "Conheça Nossa Missão", "href": "#about",      "variant": "primary" },
-    { "label": "Junte-se à Comunidade","href": "#community",  "variant": "secondary" }
-  ]
-}

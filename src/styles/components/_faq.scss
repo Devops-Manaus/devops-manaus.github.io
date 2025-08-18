@@ -1,0 +1,86 @@
+#faq {
+  padding: 3rem 0;
+
+  .section-title {
+    font-size: 1.875rem;  /* 30px */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .faq-list {
+    max-width: 30rem;     /* 640px */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    details {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+
+      summary {
+        /* altera para flex */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        cursor: pointer;
+        font-size: 1.125rem; /* 18px */
+        font-weight: 500;
+        list-style: none;
+        padding: 0;            /* remove padding-right antigo */
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        &::after {
+          content: '+';
+          position: static;     /* faz parte do fluxo flex */
+          margin-left: 1rem;    /* espaço entre texto e ícone */
+          font-size: 1.25rem;
+        }
+      }
+
+      &[open] summary::after {
+        content: '-';
+      }
+
+      p {
+        margin-top: 0.5rem;
+        color: #4b5563;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #faq {
+    padding: 2rem 0;
+
+    .faq-list {
+      max-width: 90%;
+      margin: 0 auto;
+      gap: 0.5rem;
+
+      details {
+        padding: 0.75rem;
+
+        summary {
+          font-size: 1rem;
+          /* já tem display:flex etc, então apenas reduz fontes/espaços */
+
+          &::after {
+            margin-left: 0.5rem;
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+}

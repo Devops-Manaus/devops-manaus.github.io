@@ -11,21 +11,21 @@
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-block;
-  margin: 0 1rem;
-}
+  text-decoration: none;
 
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(v.$color-secondary, 0.3);
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(v.$color-secondary, 0.3);
+  }
 
-.cta-secondary {
-  background: transparent;
-  color: v.$color-secondary;
-  border: 2px solid v.$color-secondary;
-}
+  &.cta-secondary {
+    background: transparent;
+    color: v.$color-secondary;
+    border: 2px solid v.$color-secondary;
 
-.cta-secondary:hover {
-  background: v.$color-secondary;
-  color: #fff;
+    &:hover {
+      background: v.$color-secondary;
+      color: #fff;
+    }
+  }
 }

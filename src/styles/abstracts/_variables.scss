@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $color-primary: #1a365d !default;
 $color-secondary: #2b6cb8 !default;
 $color-accent: #ff6b6b !default;
@@ -68,8 +70,8 @@ $themes: (
                 color-secondary: $jungle-green,
                 color-accent: $theater-gold,
                 bg-stop-1: $sky-blue,
-                bg-stop-2: mix($sky-blue, $theater-gold, 20%),
-                bg-stop-3: mix($sky-blue, $jungle-green, 20%),
+                bg-stop-2: color.mix($sky-blue, $theater-gold, 20%),
+                bg-stop-3: color.mix($sky-blue, $jungle-green, 20%),
                 bg-stop-4: $jungle-green,
                 bg-stop-5: $theater-gold,
                 bg-stop-6: $bridge-red

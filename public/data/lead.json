@@ -1,0 +1,16 @@
+{
+  "title": "Junte-se à nossa Comunidade!",
+  "description": "Conecte-se com devs da região, tire dúvidas e participe de eventos via Slack ou WhatsApp.",
+  "ctas": [
+    {
+      "label": "Entrar no Slack",
+      "href": "https://slack.com/devops-manaus",
+      "variant": "primary"
+    },
+    {
+      "label": "Entrar no WhatsApp",
+      "href": "https://chat.whatsapp.com/seuGrupoAqui",
+      "variant": "secondary"
+    }
+  ]
+}
