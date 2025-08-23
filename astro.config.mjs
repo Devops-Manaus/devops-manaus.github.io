@@ -4,7 +4,7 @@ import react from '@astrojs/react'
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://devopsmanaus.github.io/',
+    site: 'https://devops-manaus.github.io/',
     base: '/',
     output: 'static',
     integrations: [react()],
