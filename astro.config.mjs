@@ -9,4 +9,3 @@ export default defineConfig({
     output: 'static',
     integrations: [react()],
 });
-
