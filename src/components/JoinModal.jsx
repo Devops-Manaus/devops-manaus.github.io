@@ -1,4 +1,3 @@
-// src/components/JoinModal.jsx
 import React from 'react';
 
 export default function JoinModal({ isOpen, onClose }) {
