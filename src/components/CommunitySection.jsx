@@ -19,7 +19,7 @@ export default function CommunitySection() {
     return (
         <section id="community">
             <h2 className="section-title">Nossa Comunidade</h2>
-            <div className="stats">
+            <div className="stats card">
                 {community.stats.map((stat, index, arr) => (
                     <div className="stat" key={index}>
             <span className="stat-number">

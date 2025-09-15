@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "astro": "^5.13.2",
+    "audit": "^0.0.6",
+    "fast-xml-parser": "^5.2.5",
     "lucide-react": "^0.539.0",
+    "next": "^15.5.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
