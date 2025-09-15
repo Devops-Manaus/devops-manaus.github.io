@@ -1,4 +1,3 @@
-// src/components/HeroSection.jsx
 import React, { useEffect, useState } from 'react';
 import JoinWidget from './JoinWidget.jsx';
 

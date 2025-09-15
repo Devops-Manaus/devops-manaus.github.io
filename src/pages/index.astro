@@ -13,6 +13,8 @@ import ServicesSection from '../components/ServicesSection.jsx';
 import CommunitySection from '../components/CommunitySection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FooterSection from '../components/FooterSection.jsx';
+import EventCarousel from "../components/EventCarousel.jsx";
+
 ---
 
 <Base title="DevOps Manaus – Transformando o Futuro Tech da Amazônia">
@@ -22,6 +24,8 @@ import FooterSection from '../components/FooterSection.jsx';
     <HeroSection client:load/>
     <AboutSection client:visible/>
     <PartnersSection client:visible/>
+    <EventCarousel client:load/>
+
     <ServicesSection client:visible/>
     <CommunitySection client:visible/>
     <FaqSection client:visible/>
