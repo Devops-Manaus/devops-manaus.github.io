@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: devops-manaus-cms
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: MODE
+        value: cms
+      - key: PORT
+        value: "10000"
+      - key: CMS_USER
+        sync: false
+      - key: CMS_PASSWORD
+        sync: false
+    disk:
+      name: cms-data
+      mountPath: /app/public/uploads
+      sizeGB: 10
+
+  - type: web
+    name: devops-manaus-site
+    runtime: docker
+    plan: free
+    envVars:
+      - key: MODE
+        value: serve
+      - key: PORT
+        value: "10000"

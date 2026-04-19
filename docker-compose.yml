@@ -1,0 +1,36 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: dev
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+
+  cms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: cms
+      PORT: 3001
+      CMS_USER: ${CMS_USER:-admin}
+      CMS_PASSWORD: ${CMS_PASSWORD:-change-me}
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./:/app
+
+  site_prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: serve
+      PORT: 3000
+    ports:
+      - "8080:3000"
