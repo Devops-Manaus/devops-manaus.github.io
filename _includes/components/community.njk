@@ -1,0 +1,46 @@
+<section id="community" style="max-width: 1200px; margin: 0 auto; padding: 70px 28px;">
+
+  <h2 style="font-size: 42px; margin: 0 0 60px 0; font-weight: 600; letter-spacing: -1px;">
+    Nossa comunidade
+  </h2>
+
+  <div style="padding: 48px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px;">
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 48px;">
+      {% if community.stats %}
+        <div>
+          <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px;">
+            Membros
+          </div>
+          <div style="font-size: 32px; font-weight: 600; color: var(--accent);">
+            {{ community.stats.members or 0 }}
+          </div>
+        </div>
+        <div>
+          <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px;">
+            Eventos
+          </div>
+          <div style="font-size: 32px; font-weight: 600; color: var(--accent);">
+            {{ community.stats.events or 0 }}
+          </div>
+        </div>
+        <div>
+          <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px;">
+            Projetos
+          </div>
+          <div style="font-size: 32px; font-weight: 600; color: var(--accent);">
+            {{ community.stats.projects or 0 }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if community.description %}
+    <p style="font-size: 16px; line-height: 1.7; color: var(--ink-2); margin: 0;">
+      {{ community.description }}
+    </p>
+    {% endif %}
+
+  </div>
+
+</section>

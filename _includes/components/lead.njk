@@ -1,0 +1,35 @@
+<section id="contact" style="max-width: 1200px; margin: 0 auto; padding: 70px 28px;">
+
+  <div style="padding: 48px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%); border-radius: 12px; color: var(--bg-card); text-align: center;">
+
+    {% if lead.title %}
+    <h2 style="font-size: 36px; margin: 0 0 20px 0; font-weight: 600; letter-spacing: -0.8px;">
+      {{ lead.title }}
+    </h2>
+    {% endif %}
+
+    {% if lead.description %}
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 32px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+      {{ lead.description }}
+    </p>
+    {% endif %}
+
+    {% if lead.ctas %}
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      {% for cta in lead.ctas %}
+        {% if cta.variant == "primary" %}
+          <a href="{{ cta.href }}" style="background: var(--bg-card); color: var(--ink); border: 0; border-radius: 8px; padding: 14px 28px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block;">
+            {{ cta.label }}
+          </a>
+        {% else %}
+          <a href="{{ cta.href }}" style="background: transparent; color: var(--bg-card); border: 2px solid var(--bg-card); border-radius: 8px; padding: 12px 28px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block;">
+            {{ cta.label }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+
+</section>

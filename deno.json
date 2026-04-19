@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "dev": "deno run -A --no-check --config=deno.json https://deno.land/x/lume@v2.4.0/cli.ts --serve",
+    "build": "deno run -A --no-check --config=deno.json https://deno.land/x/lume@v2.4.0/cli.ts",
+    "cms": "deno run -A --no-check --config=deno.json --env-file=.env https://deno.land/x/lume@v2.4.0/cli.ts cms -p 3001"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.4.0/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.12.0/",
+    "dom": "https://cdn.jsdelivr.net/gh/oscarotero/dom@0.1.5/dom.js",
+    "cropper": "https://cdn.jsdelivr.net/npm/cropperjs@2.0.0/dist/cropper.esm.js"
+  }
+}

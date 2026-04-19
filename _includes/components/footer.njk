@@ -1,0 +1,78 @@
+<footer style="border-top: 1px solid var(--line); padding: 48px 28px 40px; margin-top: 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;">
+
+    <!-- Brand section -->
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <svg width="26" height="26" viewBox="0 0 26 26">
+          <circle cx="10" cy="13" r="8" fill="var(--accent)" />
+          <circle cx="16" cy="13" r="8" fill="var(--accent-2)" style="mix-blend-mode: multiply; opacity: 0.88;" />
+        </svg>
+        <span style="font-weight: 700; font-size: 16;">DevOps / Manaus</span>
+      </div>
+      <p style="font-size: 13px; color: var(--ink-3); margin: 0; max-width: 280px; line-height: 1.6;">
+        Comunidade aberta de profissionais de infraestrutura, plataforma e cultura DevOps em Manaus e no interior do Amazonas. Feito por voluntários, desde 2021.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase;">
+        Comunidade
+      </div>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Sobre</a>
+        </li>
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Código de conduta</a>
+        </li>
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Organizadores</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- More links -->
+    <div>
+      <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase;">
+        Aprender
+      </div>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Trilhas</a>
+        </li>
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Mentoria</a>
+        </li>
+        <li style="font-size: 13px; margin-bottom: 8px; color: var(--ink-2);">
+          <a href="#" style="color: inherit;">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <div class="mono" style="font-size: 11px; color: var(--ink-3); letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase;">
+        Conectar
+      </div>
+      {% if footer and footer.social %}
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        {% for social in footer.social %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); font-size: 14px; font-weight: 600;">
+          {{ social.name[0] }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="max-width: 1200px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-3);" class="mono">
+    <span>© 2026 DEVOPS MANAUS · CC BY-SA 4.0</span>
+    <span>HECHO NA FLORESTA · 03°06′S 60°01′W</span>
+  </div>
+
+</footer>

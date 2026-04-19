@@ -1,0 +1,58 @@
+<section style="max-width: 1200px; margin: 0 auto; padding: 70px 28px;">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 60px; flex-wrap: wrap; gap: 16px;">
+    <h2 style="font-size: 42px; margin: 0; font-weight: 600; letter-spacing: -1px;">
+      Parceiros
+    </h2>
+    <p style="font-size: 14px; color: var(--ink-3); margin: 0;">
+      Organizações que acreditam na comunidade
+    </p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+    {% for partner in search.pages("type=partner") %}
+    <div style="background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+
+      {% if partner.img %}
+      <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--bg);">
+        <img
+          src="{{ partner.img }}"
+          alt="{{ partner.name }}"
+          style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"
+        />
+      </div>
+      {% else %}
+      <div style="width: 100%; height: 100px; background: linear-gradient(135deg, var(--bg) 0%, var(--line) 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 36px; font-weight: 700; color: var(--accent); letter-spacing: -1px;">{{ partner.name[0] }}</span>
+      </div>
+      {% endif %}
+
+      <div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+        <h3 style="font-size: 18px; margin: 0; font-weight: 600; letter-spacing: -0.3px; color: var(--ink);">
+          {{ partner.name }}
+        </h3>
+        {% if partner.description %}
+        <p style="font-size: 13px; color: var(--ink-2); line-height: 1.6; margin: 0; flex: 1;">
+          {{ partner.description }}
+        </p>
+        {% endif %}
+        {% if partner.website %}
+        <a
+          href="{{ partner.website }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; border-top: 1px solid var(--line); padding-top: 14px;"
+        >
+          Visitar site
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        {% endif %}
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</section>

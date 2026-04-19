@@ -1,0 +1,59 @@
+<header class="site-header" style="position: sticky; top: 0; z-index: 50; background: rgba(245,242,236,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);">
+  <div class="site-header__inner" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 18px 28px;">
+
+    <div class="site-header__left" style="display: flex; align-items: center; gap: 38px;">
+      <a href="/" style="display: flex; align-items: center; gap: 10px;">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <circle cx="10" cy="13" r="8" fill="var(--accent)" />
+          <circle cx="16" cy="13" r="8" fill="var(--accent-2)" style="mix-blend-mode: multiply; opacity: 0.88;" />
+        </svg>
+        <span style="font-weight: 700; font-size: 16px; letter-spacing: -0.2px;">
+          DevOps<span style="color: var(--ink-3); font-weight: 500;"> / Manaus</span>
+        </span>
+      </a>
+
+      <nav class="site-header__nav" aria-label="Navegação principal" style="display: flex; gap: 22px;">
+        {% for item in navlinks %}
+        <a href="{{ item.href }}" style="font-size: 14px; color: var(--ink); font-weight: 500; padding: 6px 0;">
+          {{ item.label }}
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+
+    <div class="site-header__actions" style="display: flex; align-items: center; gap: 10px;">
+      <button style="background: none; border: 1px solid var(--line-2); border-radius: 7px; padding: 8px 14px; font-size: 13px; font-weight: 500;">
+        Entrar
+      </button>
+      <button style="background: var(--ink); color: var(--bg); border: 0; border-radius: 7px; padding: 9px 15px; font-size: 13px; font-weight: 500;">
+        Participar
+      </button>
+    </div>
+
+    <details class="mobile-menu">
+      <summary aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <div class="mobile-menu__panel">
+        <nav class="mobile-menu__nav" aria-label="Navegação mobile">
+          {% for item in navlinks %}
+          <a href="{{ item.href }}">{{ item.label }}</a>
+          {% endfor %}
+        </nav>
+
+        <div class="mobile-menu__actions">
+          <button style="background: none; border: 1px solid var(--line-2); border-radius: 8px; padding: 10px 14px; font-size: 14px; font-weight: 500; width: 100%;">
+            Entrar
+          </button>
+          <button style="background: var(--ink); color: var(--bg); border: 0; border-radius: 8px; padding: 11px 14px; font-size: 14px; font-weight: 500; width: 100%;">
+            Participar
+          </button>
+        </div>
+      </div>
+    </details>
+
+  </div>
+</header>

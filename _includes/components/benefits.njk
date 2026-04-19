@@ -1,0 +1,23 @@
+<section style="max-width: 1200px; margin: 0 auto; padding: 70px 28px;">
+
+  <h2 style="font-size: 42px; margin: 0 0 60px 0; font-weight: 600; letter-spacing: -1px;">
+    Benefícios
+  </h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+    {% for benefit in search.pages("type=benefit", "order=asc") %}
+    <div style="padding: 32px; background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg) 100%); border: 1px solid var(--line); border-radius: 12px;">
+      {% if benefit.icon %}
+      <div style="font-size: 32px; margin-bottom: 16px;">{{ benefit.icon }}</div>
+      {% endif %}
+      <h3 style="font-size: 18px; margin: 0 0 16px 0; font-weight: 600; letter-spacing: -0.2px; color: var(--accent);">
+        {{ benefit.title }}
+      </h3>
+      <p style="font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0;">
+        {{ benefit.description }}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>

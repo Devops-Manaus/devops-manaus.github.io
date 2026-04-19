@@ -1,0 +1,23 @@
+<section id="services" style="max-width: 1200px; margin: 0 auto; padding: 70px 28px;">
+
+  <h2 style="font-size: 42px; margin: 0 0 60px 0; font-weight: 600; letter-spacing: -1px;">
+    Nossos serviços
+  </h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+    {% for service in search.pages("type=service", "order=asc") %}
+    <div style="padding: 24px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px;">
+      {% if service.icon %}
+      <div style="font-size: 32px; margin-bottom: 16px;">{{ service.icon }}</div>
+      {% endif %}
+      <h3 style="font-size: 18px; margin: 0 0 12px 0; font-weight: 600; letter-spacing: -0.2px;">
+        {{ service.title }}
+      </h3>
+      <p style="font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0;">
+        {{ service.description }}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>

@@ -1,4 +1,4 @@
-name: Deploy Astro to Pages
+name: Deploy Lume to Pages
 on:
   push:
     branches: [ main ]
@@ -15,15 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: denoland/setup-deno@v1
         with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run build
-      - run: touch dist/.nojekyll
+          deno-version: v2.x
+      - name: Build with Lume
+        run: deno task build
+      - name: Create .nojekyll
+        run: touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build
