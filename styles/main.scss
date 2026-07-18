@@ -1209,6 +1209,27 @@ p {
     height: auto;
   }
 
+  .meetup__media {
+    position: relative;
+    z-index: 2;
+  }
+
+  .lead__panel {
+    background:
+      radial-gradient(circle at 0 0, transparent 0 13px, var(--ring-subtle) 14px 24px, transparent 25px),
+      radial-gradient(circle at 52% 0, transparent 0 15px, var(--ring-muted) 16px 28px, transparent 29px),
+      radial-gradient(circle at 100% 0, transparent 0 18px, var(--ring-subtle) 19px 32px, transparent 33px),
+      radial-gradient(circle at 100% 36%, transparent 0 12px, var(--ring-muted) 13px 23px, transparent 24px),
+      radial-gradient(circle at 0 66%, transparent 0 14px, var(--ring-subtle) 15px 26px, transparent 27px),
+      radial-gradient(circle at 0 100%, transparent 0 16px, var(--ring-muted) 17px 29px, transparent 30px),
+      radial-gradient(circle at 100% 100%, transparent 0 14px, var(--ring-subtle) 15px 26px, transparent 27px),
+      var(--ink);
+  }
+
+  .lead__panel::after {
+    display: none;
+  }
+
   .about__item {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 12px;
