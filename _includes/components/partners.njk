@@ -9,8 +9,7 @@
       {% for partner in partners.items %}
       <figure class="partner-card">
         <div class="partner-card__image">
-          <img src="{{ partner.image }}" alt="Imagem padrão de {{ partner.name }}" width="160" height="160" />
-          <span aria-hidden="true">0{{ loop.index }}</span>
+          <img src="{{ partner.image }}" alt="Logo de {{ partner.name }}" width="160" height="160" />
         </div>
         <figcaption>{{ partner.name }}</figcaption>
       </figure>
@@ -19,7 +18,6 @@
       <figure class="partner-card" aria-hidden="true">
         <div class="partner-card__image">
           <img src="{{ partner.image }}" alt="" width="160" height="160" />
-          <span>0{{ loop.index }}</span>
         </div>
         <figcaption>{{ partner.name }}</figcaption>
       </figure>

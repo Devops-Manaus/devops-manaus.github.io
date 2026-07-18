@@ -1,14 +1,14 @@
 {
   "items": [
-    { "name": "Bemol", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "Venturus", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "Eldorado", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "Uninorte", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "BotCity", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "LinuxTips", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "PyLadies Manaus", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "AWS Group Manaus", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "PHPManaus", "image": "/assets/media/images/partner-placeholder.svg" },
-    { "name": "ManasTech", "image": "/assets/media/images/partner-placeholder.svg" }
+    { "name": "Bemol", "image": "/assets/media/parteners/Bemol.png" },
+    { "name": "Venturus", "image": "/assets/media/parteners/venturus.png" },
+    { "name": "Eldorado", "image": "/assets/media/parteners/eldorado.png" },
+    { "name": "Uninorte", "image": "/assets/media/parteners/uninorte.png" },
+    { "name": "BotCity", "image": "/assets/media/parteners/botcity.jpeg" },
+    { "name": "LinuxTips", "image": "/assets/media/parteners/linuxtips_logo.jpeg" },
+    { "name": "PyLadies Manaus", "image": "/assets/media/parteners/pyladies.png" },
+    { "name": "AWS Group Manaus", "image": "/assets/media/parteners/awsgroupmanaus.jpg" },
+    { "name": "PHPManaus", "image": "/assets/media/parteners/phpmanaus.png" },
+    { "name": "ManasTech", "image": "/assets/media/parteners/manastech.jpg" }
   ]
 }

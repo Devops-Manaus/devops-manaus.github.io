@@ -2,19 +2,19 @@
   "items": [
     {
       "name": "Paula Silva",
-      "photo": "/assets/media/images/organizer-placeholder.svg",
+      "photo": "/assets/media/organizers/paula.jpeg",
       "bio": "Mãe, graduanda em Ciência da Computação pela UFAM e Analista de Software Trainee no Instituto Eldorado. Embaixadora LinuxTips.local Manaus e organizadora das comunidades DevOps Manaus, AWS UG Manaus e PyLadies Manaus. Atua como voluntária em projetos de democratização do ensino de programação e letramento digital.",
       "socials": []
     },
     {
       "name": "Samuel Viana",
-      "photo": "/assets/media/images/organizer-placeholder.svg",
+      "photo": "/assets/media/organizers/samuel.jpeg",
       "bio": "Graduado em Ciência de Dados, pós-graduando em Ciência de Dados e Engenheiro de Dados na Ford pela MathGroup. Embaixador LinuxTips.local Manaus e braço técnico das comunidades DevOps Manaus e Apoena Stack.",
       "socials": []
     },
     {
       "name": "Maria Eduarda",
-      "photo": "/assets/media/images/organizer-placeholder.svg",
+      "photo": "/assets/media/organizers/eduarda.jpeg",
       "bio": "Graduanda em Engenharia de Software e estagiária em Desenvolvimento de Software. Organizadora nas comunidades AWS UG Manaus, PyLadies Manaus e DevOps Manaus. Atua na promoção da educação, inclusão e compartilhamento de conhecimento em tecnologia.",
       "socials": []
     }
