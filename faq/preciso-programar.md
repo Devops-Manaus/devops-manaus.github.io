@@ -1,5 +1,5 @@
 ---
 order: 2
-question: Preciso saber programar?
-answer: Não! Temos trilhas desde o zero até DevOps avançado. Se você tem curiosidade, já é bem-vindo.
+question: Preciso já trabalhar com DevOps?
+answer: Não. Os encontros acolhem quem está começando, quem está estudando e quem já atua na área. Curiosidade e disposição para trocar já são um bom começo.
 ---

@@ -1,5 +1,5 @@
 ---
 order: 1
-question: É gratuito mesmo?
-answer: Sim! Tudo aqui é feito por e para a comunidade. Sem custos, sem pegadinhas. Só colaboração.
+question: Os encontros têm custo?
+answer: Não. A participação nos encontros da comunidade é gratuita. Se algum evento tiver uma orientação específica, ela será informada na divulgação.
 ---

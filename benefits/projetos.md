@@ -1,6 +1,5 @@
 ---
 order: 3
-icon: 🚀
-title: Projetos
-description: Participe de iniciativas open source com impacto regional.
+title: Ideias que ganham companhia
+description: "Encontre gente para colaborar em iniciativas abertas e transformar uma ideia em próximo passo."
 ---

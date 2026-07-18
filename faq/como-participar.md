@@ -1,5 +1,5 @@
 ---
 order: 3
-question: Como faço para participar?
-answer: É só entrar no grupo da comunidade no WhatsApp ou Slack. Todos os links estão aqui no site.
+question: Como acompanho os próximos encontros?
+answer: Acompanhe os canais e redes da comunidade para ver a programação e os links de participação. Quando houver um novo encontro, as informações serão divulgadas por lá.
 ---

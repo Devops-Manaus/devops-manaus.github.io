@@ -3,13 +3,13 @@
   "description": "Faça parte do movimento DevOps na Amazônia. Tire dúvidas, participe de eventos e colabore com outros devs no Slack e WhatsApp. Aqui, todo mundo cresce junto.",
   "ctas": [
     {
-      "label": "Entrar no Slack",
-      "href": "https://slack.com/devops-manaus",
+      "label": "Entrar no Discord",
+      "href": "https://discord.gg/VN6vSeRnQ",
       "variant": "primary"
     },
     {
       "label": "Entrar no WhatsApppp",
-      "href": "https://chat.whatsapp.com/seuGrupoAqui",
+      "href": "https://chat.whatsapp.com/LtjOfiSN5zB5nMleY9nRcS",
       "variant": "secondary"
     }
   ]

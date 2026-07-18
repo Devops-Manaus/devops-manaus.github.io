@@ -1,6 +1,5 @@
 ---
 order: 1
-icon: 🤝
-title: Networking
-description: Conecte-se com profissionais da região e amplie suas oportunidades.
+title: Conversas que viram contato
+description: "Conheça pessoas que vivem desafios parecidos, troque referências e leve a conversa adiante depois de cada encontro."
 ---
