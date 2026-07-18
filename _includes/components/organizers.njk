@@ -23,18 +23,24 @@
         <label class="organizer-card__flip-toggle" for="organizer-{{ loop.index }}"></label>
       </div>
       <div class="organizer-card__content">
-        <h3>{{ organizer.name }}</h3>
+        <div class="organizer-card__heading">
+          <h3>{{ organizer.name }}</h3>
+          {% if organizer.socials.length %}
+          <nav aria-label="Redes sociais de {{ organizer.name }}">
+            {% for social in organizer.socials %}
+            <a href="{{ social.url }}"{% if social.url %} target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ social.label }} de {{ organizer.name }}">
+              {% if social.icon == "linkedin" %}
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2 2 0 1 0 4.75 7a2 2 0 0 0 0-4ZM21 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.1 1.2-3.6 2v-1.7H9.2V21h3.5v-6.2c0-1.6.3-3.2 2.3-3.2 2 0 2 1.8 2 3.3V21H21v-7.2Z" fill="currentColor"/></svg>
+              {% endif %}
+            </a>
+            {% endfor %}
+          </nav>
+          {% endif %}
+        </div>
         <label class="organizer-card__toggle-label" for="organizer-{{ loop.index }}">
           <span class="organizer-card__open-label">Conheça a trajetória</span>
           <span class="organizer-card__close-label">Voltar para a foto</span>
         </label>
-        {% if organizer.socials.length %}
-        <nav aria-label="Redes sociais de {{ organizer.name }}">
-          {% for social in organizer.socials %}
-          <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.label }}</a>
-          {% endfor %}
-        </nav>
-        {% endif %}
       </div>
     </article>
     {% endfor %}

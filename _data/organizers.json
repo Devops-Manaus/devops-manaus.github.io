@@ -8,7 +8,9 @@
         { "title": "Comunidades", "text": "Embaixadora LinuxTips.local Manaus e organizadora da DevOps Manaus, AWS UG Manaus e PyLadies Manaus." },
         { "title": "Impacto", "text": "Voluntária em projetos de democratização do ensino de programação e letramento digital." }
       ],
-      "socials": []
+      "socials": [
+        { "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/sspaulaj/" }
+      ]
     },
     {
       "name": "Samuel Viana",
@@ -17,7 +19,9 @@
         { "title": "Dados", "text": "Graduado e pós-graduando em Ciência de Dados; Engenheiro de Dados na Ford pela MathGroup." },
         { "title": "Comunidades", "text": "Embaixador LinuxTips.local Manaus e braço técnico da DevOps Manaus e Apoena Stack." }
       ],
-      "socials": []
+      "socials": [
+        { "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/ssamuelsilva/?locale=pt" }
+      ]
     },
     {
       "name": "Maria Eduarda",
@@ -27,7 +31,9 @@
         { "title": "Comunidades", "text": "Organizadora da AWS UG Manaus, PyLadies Manaus e DevOps Manaus." },
         { "title": "Propósito", "text": "Promove educação, inclusão e compartilhamento de conhecimento em tecnologia." }
       ],
-      "socials": []
+      "socials": [
+        { "label": "LinkedIn", "icon": "linkedin", "url": "" }
+      ]
     }
   ]
 }

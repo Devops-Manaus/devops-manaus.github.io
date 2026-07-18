@@ -1126,8 +1126,8 @@ p {
   inset: 0;
   display: grid;
   align-content: center;
-  gap: 16px;
-  padding: clamp(20px, 4vw, 36px);
+  gap: 20px;
+  padding: clamp(24px, 4vw, 40px);
   overflow: hidden;
   border-radius: 18px;
   background:
@@ -1153,7 +1153,8 @@ p {
   strong {
     color: var(--accent-2);
     font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
@@ -1161,8 +1162,9 @@ p {
   p {
     max-width: 34ch;
     margin: 0;
-    font-size: clamp(12px, 1.25vw, 14px);
-    line-height: 1.45;
+    font-size: clamp(13px, 1.35vw, 15px);
+    font-weight: 500;
+    line-height: 1.5;
     text-wrap: pretty;
   }
 }
@@ -1201,8 +1203,16 @@ p {
 .organizer-card__content {
   padding: 16px 0 0;
 
+  .organizer-card__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
   h3 {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: clamp(20px, 2vw, 26px);
     letter-spacing: -0.025em;
   }
@@ -1233,7 +1243,28 @@ p {
   nav {
     display: flex;
     gap: 12px;
-    margin-top: 16px;
+  }
+
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--line-2);
+    border-radius: 50%;
+    color: var(--ink-2);
+  }
+
+  nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  nav svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
