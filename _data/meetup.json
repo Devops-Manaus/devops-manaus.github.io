@@ -1,0 +1,21 @@
+{
+  "title": "MeetUp LINUXtips.local Manaus",
+  "date": "25 de julho de 2026",
+  "time": "13h30",
+  "venue": "UniNorte - Campus Djalma Batista",
+  "address": "Avenida Djalma Batista, 122, Unidade 22, Manaus - AM",
+  "description": "Um encontro gratuito para aprender, compartilhar experiências e criar conexões com a comunidade de tecnologia de Manaus.",
+  "image": "/assets/media/meetups/meetup-linuxtips-local-manaus.png",
+  "image_alt": "Arte do MeetUp LINUXtips.local Manaus com foto da comunidade, data e local do evento",
+  "registration_url": "https://www.sympla.com.br/evento/meetup-linuxtips-local-manaus/3484908",
+  "workshops": [
+    {
+      "title": "Do HTML ao Helm Chart",
+      "description": "Construa uma aplicação simples, empacote com Docker, publique no GitHub Container Registry e faça o deploy em Kubernetes local com Helm."
+    },
+    {
+      "title": "GitOps na prática",
+      "description": "Crie ambientes automáticos por Pull Request com GitHub Actions, ArgoCD e ApplicationSet."
+    }
+  ]
+}

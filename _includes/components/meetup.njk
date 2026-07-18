@@ -1,0 +1,35 @@
+<section id="meetup" class="meetup" aria-labelledby="meetup-title">
+  <div class="meetup__media">
+    <img src="{{ meetup.image }}" alt="{{ meetup.image_alt }}" width="1400" height="733" loading="lazy" />
+  </div>
+
+  <div class="meetup__content">
+    <p class="meetup__label">Próximo encontro</p>
+    <h2 id="meetup-title">{{ meetup.title }}</h2>
+    <p class="meetup__description">{{ meetup.description }}</p>
+
+    <dl class="meetup__details">
+      <div>
+        <dt>Data e horário</dt>
+        <dd><time datetime="2026-07-25T13:30:00-04:00">{{ meetup.date }}, {{ meetup.time }}</time></dd>
+      </div>
+      <div>
+        <dt>Local</dt>
+        <dd>{{ meetup.venue }}<br />{{ meetup.address }}</dd>
+      </div>
+    </dl>
+
+    <div class="meetup__workshops">
+      <h3>Duas oficinas em paralelo</h3>
+      {% for workshop in meetup.workshops %}
+      <article>
+        <h4>{{ workshop.title }}</h4>
+        <p>{{ workshop.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <a class="button meetup__cta" href="{{ meetup.registration_url }}" target="_blank" rel="noreferrer">Inscreva-se gratuitamente</a>
+    <p class="meetup__notice">Participação gratuita. Vagas limitadas.</p>
+  </div>
+</section>

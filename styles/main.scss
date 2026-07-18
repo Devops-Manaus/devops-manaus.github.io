@@ -218,6 +218,126 @@ p {
   margin-top: 36px;
 }
 
+.meetup {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--ink);
+}
+
+.meetup__media {
+  background: var(--ink);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.meetup__content {
+  padding: clamp(32px, 5vw, 64px);
+  color: var(--bg-card);
+
+  h2 {
+    max-width: 14ch;
+    margin: 0;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+}
+
+.meetup__label,
+.meetup__details dt {
+  margin: 0;
+  color: var(--accent-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.meetup__description {
+  max-width: 48ch;
+  margin: 22px 0 0;
+  color: oklch(91% 0.01 80);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.meetup__details {
+  display: grid;
+  gap: 18px;
+  margin: 30px 0 0;
+
+  div {
+    display: grid;
+    gap: 6px;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+}
+
+.meetup__workshops {
+  margin-top: 34px;
+  border-top: 1px solid oklch(95% 0.01 80 / 0.24);
+
+  h3 {
+    margin: 20px 0 0;
+    font-size: 18px;
+    letter-spacing: -0.025em;
+  }
+
+  article {
+    padding: 18px 0;
+    border-bottom: 1px solid oklch(95% 0.01 80 / 0.24);
+  }
+
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 17px;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin-top: 6px;
+    color: oklch(85% 0.01 80);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.meetup__cta {
+  margin-top: 30px;
+  background: var(--accent-2);
+  color: var(--ink);
+}
+
+.meetup__cta:hover {
+  background: oklch(70% 0.14 55);
+}
+
+.meetup__notice {
+  margin: 12px 0 0;
+  color: oklch(82% 0.01 80);
+  font-size: 14px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1028,6 +1148,16 @@ p {
 
   .hero__subtitle {
     font-size: 16px;
+  }
+
+  .meetup {
+    grid-template-columns: 1fr;
+    margin: 0 16px;
+  }
+
+  .meetup__media img {
+    aspect-ratio: 1400 / 733;
+    height: auto;
   }
 
   .about__item {
