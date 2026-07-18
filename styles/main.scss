@@ -79,12 +79,12 @@
 .lead {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 28px;
+  padding: 76px 28px;
 }
 
 .hero {
-  padding-top: 130px;
-  padding-bottom: 88px;
+  padding-top: 112px;
+  padding-bottom: 72px;
 }
 
 .hero__eyebrow,
@@ -705,7 +705,7 @@
 .partners {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 28px;
+  padding: 76px 28px;
 }
 
 .partners__heading {
@@ -795,7 +795,7 @@
 .organizers {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 28px;
+  padding: 76px 28px;
 }
 
 .organizers__heading {
@@ -953,9 +953,11 @@
 
   .hero,
   .content-section,
-  .lead {
-    padding-top: 72px !important;
-    padding-bottom: 72px !important;
+  .lead,
+  .partners,
+  .organizers {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
   }
 
   .hero__title {
