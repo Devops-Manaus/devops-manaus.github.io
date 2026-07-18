@@ -2,16 +2,26 @@
 
   <div class="section-heading">
     <p>O que movimenta a DevOps Manaus</p>
-    <h2>Aprendizado técnico<br />e comunidade, de perto.</h2>
-    <p class="section-heading__intro">A gente cria espaço para estudar, trocar experiências e conhecer quem também está construindo tecnologia na Amazônia. Hoje, isso acontece em duas frentes.</p>
+    <h2>Dois jeitos de<br />estar por perto.</h2>
+    <p class="section-heading__intro">A formação técnica acontece com a LINUXtips.local Manaus. A outra frente é nossa: encontros para quem quer conversar, aprender e construir junto na Amazônia.</p>
   </div>
 
   <div class="services__list">
     {% for service in search.pages("type=service", "order=asc") %}
-    <article class="services__item">
-      <span>0{{ loop.index }}</span>
-      <h3>{{ service.title }}</h3>
-      <p>{{ service.description }}</p>
+    <article class="services__item services__item--{{ service.kind }}">
+      <div class="services__item-header">
+        <span>0{{ loop.index }}</span>
+        <p>{{ service.eyebrow }}</p>
+      </div>
+      <div class="services__item-body">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        {% if service.external_url %}
+        <a href="{{ service.external_url }}" target="_blank" rel="noopener noreferrer">{{ service.cta }} <span aria-hidden="true">→</span></a>
+        {% else %}
+        <small>{{ service.note }}</small>
+        {% endif %}
+      </div>
     </article>
     {% endfor %}
   </div>

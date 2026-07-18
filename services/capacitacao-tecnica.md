@@ -1,5 +1,9 @@
 ---
 order: 1
-title: Capacitação técnica com LinuxTips.local Manaus
-description: "Conteúdos e encontros sobre fundamentos e ferramentas de DevOps, realizados em parceria com a LinuxTips.local Manaus. Um ponto de partida para estudar com mais profundidade e trazer dúvidas reais para a conversa."
+kind: linuxtips
+eyebrow: LINUXtips.local Manaus
+title: Formação técnica, com quem vive a prática.
+description: "Conteúdos e encontros para estudar fundamentos, ferramentas e os desafios reais de DevOps. Esta é uma frente conduzida pela LINUXtips.local Manaus, nossa parceira de aprendizado."
+cta: Conheça a LINUXtips
+external_url: https://linuxtips.io
 ---

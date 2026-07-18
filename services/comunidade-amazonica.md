@@ -1,5 +1,8 @@
 ---
 order: 2
-title: Comunidade Amazônica
-description: "Meetups para conhecer pessoas, compartilhar o que está sendo construído e manter vivas as conexões de tecnologia na Amazônia. Não é preciso ter todas as respostas para fazer parte da conversa."
+kind: comunidade
+eyebrow: DevOps Manaus
+title: Meetups para a conversa continuar.
+description: "Encontros para compartilhar trabalho real, fazer perguntas e conhecer quem também constrói tecnologia por aqui. A pauta começa em DevOps, mas a troca vai além dela."
+note: Manaus, gente e tecnologia na mesma sala.
 ---
