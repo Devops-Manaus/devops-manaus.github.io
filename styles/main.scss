@@ -220,7 +220,8 @@ p {
 
 .meetup,
 .services__item--linuxtips,
-.lead__panel {
+.lead__panel,
+.organizer-card {
   --ring-subtle: color-mix(in oklab, var(--accent-2) 35%, transparent);
   --ring-muted: color-mix(in oklab, var(--accent-2) 55%, transparent);
   --ring-vivid: color-mix(in oklab, var(--accent-2) 75%, transparent);
@@ -1063,6 +1064,7 @@ p {
 }
 
 .organizer-card {
+  position: relative;
   min-width: 0;
 
   &:nth-child(2) {
@@ -1074,40 +1076,126 @@ p {
   }
 }
 
-.organizer-card__portrait {
+.organizer-card__flip {
   position: relative;
+  aspect-ratio: 1;
+  perspective: 1000px;
+}
+
+.organizer-card__toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.organizer-card__toggle:focus-visible + .organizer-card__flip {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.organizer-card__portrait {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
   background: oklch(90% 0.03 175);
   border: 1px solid var(--line);
   border-radius: 18px;
+  backface-visibility: hidden;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
 
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
     object-fit: cover;
     background: var(--bg);
     transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  span {
-    position: absolute;
-    right: 14px;
-    bottom: 12px;
-    color: var(--bg-card);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    font-weight: 600;
-    text-shadow: 0 1px 8px oklch(20% 0.02 70 / 0.45);
-  }
 }
 
 .organizer-card:hover .organizer-card__portrait img {
   transform: scale(1.035);
 }
 
+.organizer-card__bio {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: clamp(20px, 4vw, 36px);
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 0 0, transparent 0 13px, var(--ring-subtle) 14px 24px, transparent 25px),
+    radial-gradient(circle at 52% 12%, transparent 0 15px, var(--ring-muted) 16px 28px, transparent 29px),
+    radial-gradient(circle at 100% 0, transparent 0 18px, var(--ring-subtle) 19px 32px, transparent 33px),
+    radial-gradient(circle at 88% 42%, transparent 0 12px, var(--ring-muted) 13px 23px, transparent 24px),
+    radial-gradient(circle at 18% 62%, transparent 0 14px, var(--ring-subtle) 15px 26px, transparent 27px),
+    radial-gradient(circle at 46% 100%, transparent 0 16px, var(--ring-muted) 17px 29px, transparent 30px),
+    radial-gradient(circle at 100% 100%, transparent 0 14px, var(--ring-subtle) 15px 26px, transparent 27px),
+    var(--ink);
+  color: var(--bg-card);
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 450ms;
+
+  div {
+    display: grid;
+    gap: 4px;
+  }
+
+  strong {
+    color: var(--accent-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  p {
+    max-width: 34ch;
+    margin: 0;
+    font-size: clamp(12px, 1.25vw, 14px);
+    line-height: 1.45;
+    text-wrap: pretty;
+  }
+}
+
+.organizer-card:nth-child(2) .organizer-card__bio {
+  background:
+    radial-gradient(circle at 12% 0, transparent 0 13px, var(--ring-muted) 14px 24px, transparent 25px),
+    radial-gradient(circle at 100% 12%, transparent 0 15px, var(--ring-subtle) 16px 28px, transparent 29px),
+    radial-gradient(circle at 0 31%, transparent 0 18px, var(--ring-subtle) 19px 32px, transparent 33px),
+    radial-gradient(circle at 49% 48%, transparent 0 12px, var(--ring-vivid) 13px 23px, transparent 24px),
+    radial-gradient(circle at 100% 70%, transparent 0 14px, var(--ring-muted) 15px 26px, transparent 27px),
+    radial-gradient(circle at 22% 100%, transparent 0 16px, var(--ring-subtle) 17px 29px, transparent 30px),
+    radial-gradient(circle at 80% 100%, transparent 0 14px, var(--ring-muted) 15px 26px, transparent 27px),
+    var(--ink);
+}
+
+.organizer-card:nth-child(3) .organizer-card__bio {
+  background:
+    radial-gradient(circle at 0 6%, transparent 0 13px, var(--ring-subtle) 14px 24px, transparent 25px),
+    radial-gradient(circle at 70% 0, transparent 0 15px, var(--ring-muted) 16px 28px, transparent 29px),
+    radial-gradient(circle at 100% 32%, transparent 0 18px, var(--ring-subtle) 19px 32px, transparent 33px),
+    radial-gradient(circle at 20% 48%, transparent 0 12px, var(--ring-vivid) 13px 23px, transparent 24px),
+    radial-gradient(circle at 82% 58%, transparent 0 14px, var(--ring-muted) 15px 26px, transparent 27px),
+    radial-gradient(circle at 0 90%, transparent 0 16px, var(--ring-subtle) 17px 29px, transparent 30px),
+    radial-gradient(circle at 100% 100%, transparent 0 14px, var(--ring-muted) 15px 26px, transparent 27px),
+    var(--ink);
+}
+
+.organizer-card__flip-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .organizer-card__content {
-  padding: 18px 4px 0;
+  padding: 16px 0 0;
 
   h3 {
     margin: 0 0 12px;
@@ -1115,7 +1203,7 @@ p {
     letter-spacing: -0.025em;
   }
 
-  summary {
+  .organizer-card__toggle-label {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1123,14 +1211,9 @@ p {
     color: var(--ink-2);
     font-size: 13px;
     font-weight: 600;
-    list-style: none;
   }
 
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  summary::after {
+  .organizer-card__toggle-label::after {
     content: "+";
     color: var(--accent);
     font-family: "JetBrains Mono", monospace;
@@ -1139,21 +1222,38 @@ p {
     line-height: 1;
   }
 
-  details[open] summary::after {
-    content: "−";
-  }
-
-  details p {
-    margin: 14px 0 0;
-    color: var(--ink-2);
-    font-size: 14px;
-    line-height: 1.6;
+  .organizer-card__close-label {
+    display: none;
   }
 
   nav {
     display: flex;
     gap: 12px;
     margin-top: 16px;
+  }
+}
+
+.organizer-card:has(.organizer-card__toggle:checked) {
+  .organizer-card__portrait {
+    transform: rotateY(-180deg);
+  }
+
+  .organizer-card__bio {
+    visibility: visible;
+    transform: rotateY(0);
+    transition-delay: 0s;
+  }
+
+  .organizer-card__toggle-label::after {
+    content: "−";
+  }
+
+  .organizer-card__open-label {
+    display: none;
+  }
+
+  .organizer-card__close-label {
+    display: inline;
   }
 }
 
@@ -1166,6 +1266,11 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .partners__track {
     animation: none;
+  }
+
+  .organizer-card__portrait,
+  .organizer-card__bio {
+    transition: none;
   }
 }
 

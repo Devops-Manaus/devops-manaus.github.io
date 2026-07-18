@@ -7,16 +7,27 @@
   <div class="organizers__grid">
     {% for organizer in organizers.items %}
     <article class="organizer-card">
-      <div class="organizer-card__portrait">
-        <img src="{{ organizer.photo }}" alt="Foto de {{ organizer.name }}" width="320" height="320" />
-        <span aria-hidden="true">0{{ loop.index }}</span>
+      <input class="organizer-card__toggle" id="organizer-{{ loop.index }}" type="checkbox" aria-label="Alternar foto e trajetória de {{ organizer.name }}" />
+      <div class="organizer-card__flip">
+        <div class="organizer-card__portrait">
+          <img src="{{ organizer.photo }}" alt="Foto de {{ organizer.name }}" width="320" height="320" />
+        </div>
+        <div class="organizer-card__bio" aria-label="Trajetória de {{ organizer.name }}">
+          {% for topic in organizer.topics %}
+          <div>
+            <strong>{{ topic.title }}</strong>
+            <p>{{ topic.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        <label class="organizer-card__flip-toggle" for="organizer-{{ loop.index }}"></label>
       </div>
       <div class="organizer-card__content">
         <h3>{{ organizer.name }}</h3>
-        <details>
-          <summary>Conheça a trajetória</summary>
-          <p>{{ organizer.bio }}</p>
-        </details>
+        <label class="organizer-card__toggle-label" for="organizer-{{ loop.index }}">
+          <span class="organizer-card__open-label">Conheça a trajetória</span>
+          <span class="organizer-card__close-label">Voltar para a foto</span>
+        </label>
         {% if organizer.socials.length %}
         <nav aria-label="Redes sociais de {{ organizer.name }}">
           {% for social in organizer.socials %}
