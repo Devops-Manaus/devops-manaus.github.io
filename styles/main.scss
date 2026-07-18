@@ -1064,6 +1064,10 @@ p {
 }
 
 .organizer-card {
+  --ring-subtle: color-mix(in oklab, var(--accent-2) 20%, transparent);
+  --ring-muted: color-mix(in oklab, var(--accent-2) 32%, transparent);
+  --ring-vivid: color-mix(in oklab, var(--accent-2) 44%, transparent);
+
   position: relative;
   min-width: 0;
 
