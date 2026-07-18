@@ -486,6 +486,106 @@
   }
 }
 
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(44px, 9vw, 140px);
+  align-items: start;
+  border-top: 1px solid var(--ink);
+}
+
+.contact__intro {
+  > p:first-child {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 66px);
+    letter-spacing: -0.06em;
+    line-height: 0.96;
+  }
+}
+
+.contact__description {
+  max-width: 39ch;
+  margin: 24px 0 0;
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact__email {
+  display: inline-block;
+  margin-top: 28px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact__form {
+  padding-top: 4px;
+
+  label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+  }
+
+  label > span {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    border: 1px solid var(--line-2);
+    border-radius: 8px;
+    outline: none;
+    background: var(--bg-card);
+    color: var(--ink);
+    font: inherit;
+  }
+
+  input {
+    min-height: 46px;
+    padding: 10px 12px;
+  }
+
+  textarea {
+    min-height: 110px;
+    padding: 12px;
+    resize: vertical;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px oklch(52% 0.09 175 / 0.18);
+  }
+
+  .button {
+    margin-top: 18px;
+  }
+}
+
+.contact__form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
 .lead__panel::after {
   position: absolute;
   right: -70px;
@@ -897,6 +997,15 @@
 
   .services__item--comunidade {
     padding-right: clamp(26px, 4vw, 46px);
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .contact__form-fields {
+    grid-template-columns: 1fr;
   }
 
   .benefits__item {
