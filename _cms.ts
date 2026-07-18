@@ -63,20 +63,6 @@ cms.collection("services: Serviços", "src:services/*.md", [
   { name: "description", type: "textarea", label: "Descrição" },
 ]);
 
-cms.document("community: Comunidade", "src:_data/community.json", [
-  {
-    name: "stats",
-    type: "object",
-    label: "Estatísticas",
-    fields: [
-      { name: "members", type: "number", label: "Membros" },
-      { name: "events", type: "number", label: "Eventos" },
-      { name: "projects", type: "number", label: "Projetos" },
-    ],
-  },
-  { name: "description", type: "textarea", label: "Descrição" },
-]);
-
 cms.collection("benefits: Benefícios", "src:benefits/*.md", [
   { name: "order", type: "number", label: "Ordem" },
   { name: "icon", type: "text", label: "Ícone (emoji)" },
@@ -116,13 +102,6 @@ cms.document("lead: Chamada Final", "src:_data/lead.json", [
       { name: "variant", type: "text", label: "Tipo (primary/secondary)" },
     ],
   },
-]);
-
-cms.collection("partners: Parceiros", "src:partners/*.md", [
-  { name: "name", type: "text", label: "Nome" },
-  { name: "img", type: "file", label: "Imagem de capa", attributes: { uploads: "uploads" } },
-  { name: "website", type: "url", label: "Site" },
-  { name: "description", type: "textarea", label: "Descrição curta" },
 ]);
 
 export default cms;

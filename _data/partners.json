@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "name": "Bemol", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "Venturus", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "Eldorado", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "Uninorte", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "BotCity", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "LinuxTips", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "PyLadies Manaus", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "AWS Group Manaus", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "PHPManaus", "image": "/assets/media/images/partner-placeholder.svg" },
+    { "name": "ManasTech", "image": "/assets/media/images/partner-placeholder.svg" }
+  ]
+}

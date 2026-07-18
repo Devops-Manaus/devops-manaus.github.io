@@ -87,12 +87,12 @@ Os artigos usam `layout: layouts/article.njk` via `articles/_data.yml`.
 
 ## Estrutura de conteúdo
 
-- `_data/*.json`: dados globais (hero, navlinks, community, lead, footer)
+- `_data/*.json`: dados globais (hero, navlinks, lead, footer)
 - `about/*.md`: seções sobre
 - `services/*.md`: serviços
 - `benefits/*.md`: benefícios
 - `faq/*.md`: FAQ
-- `partners/*.md`: parceiros
+- `_data/partners.json`: parceiros em destaque e no carrossel
 - `articles/*.md`: artigos
 - `public/uploads/`: imagens para conteúdo
 

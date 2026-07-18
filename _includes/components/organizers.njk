@@ -1,0 +1,31 @@
+<section class="organizers" aria-labelledby="organizers-title">
+  <div class="organizers__heading">
+    <p class="organizers__eyebrow">O coletivo por trás dos encontros</p>
+    <h2 id="organizers-title">Gente que move<br />a comunidade.</h2>
+  </div>
+
+  <div class="organizers__grid">
+    {% for organizer in organizers.items %}
+    <article class="organizer-card">
+      <div class="organizer-card__portrait">
+        <img src="{{ organizer.photo }}" alt="Foto de {{ organizer.name }}" width="320" height="320" />
+        <span aria-hidden="true">0{{ loop.index }}</span>
+      </div>
+      <div class="organizer-card__content">
+        <h3>{{ organizer.name }}</h3>
+        <details>
+          <summary>Conheça a trajetória</summary>
+          <p>{{ organizer.bio }}</p>
+        </details>
+        {% if organizer.socials.length %}
+        <nav aria-label="Redes sociais de {{ organizer.name }}">
+          {% for social in organizer.socials %}
+          <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.label }}</a>
+          {% endfor %}
+        </nav>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
